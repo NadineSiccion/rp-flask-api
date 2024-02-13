@@ -141,3 +141,25 @@ paths:
       responses:
         "204":
           description: "Successfully deleted person"
+  /notes:
+    post:
+      operationId: "notes.create"
+      tags:
+        - Notes
+      summary: "create a note associated with a person"
+      requestBody:
+        description: "Note to create"
+        required: True
+        content:
+          applicataion/json:
+            schema:
+              x-bocy-name: "note"
+              type: "object"
+              properties:
+                person_id:
+                  type: "integer"
+                content:
+                  type: "string"
+      responses:
+        "201":
+          description: "Successfully created a note"
