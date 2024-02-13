@@ -46,4 +46,4 @@ class PersonSchema(ma.SQLAlchemyAutoSchema):
 
 person_schema = PersonSchema()
 people_schema = PersonSchema(many=True)
-note_shcema = NoteSchema()
+note_schema = NoteSchema()
